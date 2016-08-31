@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>2048</title>
+  <style>
+	div{width:100px;height:100px;
+		background-color:pink;
+		position:absolute;
+	}
+	#left{top:500px; left:100px;}
+	#curr{top:500px; left:500px;}
+	#top{top:50px; left:500px;}
+
+  </style>
+<!-- <script>
+	/*定时器：timer
+		周期性定时器：让程序，按指定时间间隔，反复执行一项任务(函数对象)
+		如何实现动画：3步：
+		1.*每移动一次，做什么事*————函数对象
+			function moveStep(){}
+		2.*将函数对象传入setInterval中启动动画*
+			timer=setInterval(moveStep,1000)
+				timer:全局变量，获得当前定时器的序号
+		3.停止定时器：————只能用序号timer
+			clearInterval(timer);
+	*/
+	function round(){
+		document.body.innerHTML+="转一圈<br>";
+	}
+	var timer=setInterval(round,500);
+  </script>-->
+ </head>
+ <body>
+	<div id="left"></div>
+	<div id="top"></div>
+	<div id="curr"></div>
+	<script>
+		var curr=document.getElementById("curr");
+		var left=document.getElementById("ledt");
+		var top=document.getElementById("top");
+		var dura=3000;//总时间————规定
+		var steps=20;//步数————规定
+		var interval=dura/steps;//时间间隔
+		var dtopDist=(parseFloat(divTop.style.top)
+					-parseaFloat(divLeft.style.top));
+		var leftDist=?;
+		var topStep=topdist/steps;//步长
+		var leftStep=leftdist/steps;
+		function moveStep(){
+			curr.style.left=parseFloat(curr.style.left)+step+"px";						
+			if(curr.style.left==divLeft.style.left){
+				clearInterval(timer);
+			}
+		}
+		var timer=setInterval(moveStep,interval);
+	</script>
+ </body>
+</html>
